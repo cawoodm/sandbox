@@ -75,12 +75,13 @@ You do `git add` to "stage" it which means it's part of the next commit
 If you change it again, the staged version remains as is and you have to `git add` again to stage it
 
 Commit staged (with `add`) files
-git commit -m "Version 2.0"
+`git commit -m "Version 2.0"`
 
 Commit all changed files (skip staging)
-git commit -a -m "added new benchmarks"
+`git commit -a -m "added new benchmarks"`
 
-git branch
+See what branch you're on
+`git branch`
 
 See what's changed
 git diff
