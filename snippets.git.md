@@ -68,8 +68,6 @@ Typing `git st` is now the same as `git status`!
 `git help`
 `git help push` OR `git push --help`
 
-
-
 If you now change a file you it will be red (git status) which means it is out of sync
 You do `git add` to "stage" it which means it's part of the next commit
 If you change it again, the staged version remains as is and you have to `git add` again to stage it
@@ -107,7 +105,7 @@ git push origin master
 2. Make changes to files
 
 3. Commit all changes (locally)
-`commit -a -m "My First Change"`
+`git commit -a -m "My First Change"`
 
 4. Pull down latest changes from repo and auto merge
 `git pull origin`
