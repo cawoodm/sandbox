@@ -140,4 +140,7 @@ git remote add origin https://github.com/cawoodm/tennis
 #Gotchas
 Using ' instead of " in windows doesn't work! (Paths with -a does not make sense.)
 
+Pull remote in overwriting local:
+* `git fetch`
+* `git reset --hard origin/master`
 
