@@ -3,6 +3,17 @@
 ## General
 General Pi config: `sudo raspi-config`
 
+## Boot
+To set automatic boot OS (partition):
+* Determine the FAT partition: `sudo fdisk -l` (it should be mmcblk0p3)
+* Mount it: `mount /dev/mmcblk0p3 /mnt/`
+* Look for installed_os.json: `ls /mnt/`
+* View the file to see which partition your OS is on. It's the first item in the `partitions` section e.g. `"partitions" : ["/dev/mmcblk0p7"`
+* Note this number and add it to `noobs.conf`
+  * `sudo nano /mnt/noobs.conf`
+  * `default_partition_to_boot=7`
+* Save file, unmount `umount /mnt/` and `reboot`
+
 ## Hardware
 
 ##Video
