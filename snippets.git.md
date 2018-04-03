@@ -1,37 +1,22 @@
-git commit -am 'im staging and committing!'
-
-When you change .gitignore do:
-git update-index
-
-To remove and untrack files
-update .gitignore then do git rm --cached "DEV1 Scorecard\src\package.xml"
-
-
-Leica
-git init
-git config core.autocrlf input
-git config --global user.name "Marc Cawood"
-git config --global user.email cawoodm@gmail.com
-git add .
-
-# Setup an editor
-`git config --global core.editor C:/windows/system32/ed.cmd`
-OR
-`git config --global core.editor "'C:\Marc\Prg\notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`
-
 # Making a New Project
 1. Create a project in the current directory
-`git init`
+```
+git init
+```
 
 2. Add Files to Project
 
 Add (watch) a single file:
-`git add file.txt`
+```
+git add file.txt
+```
 
 OR Add all web files:
-`git add *.js`
-`git add *.css`
-`git add *.html`
+```
+git add *.js
+git add *.css
+git add *.html
+```
 
 OR Add (watch) all files and subfolders
 `git add .`
@@ -42,62 +27,89 @@ OR Add (watch) all files and NOT subfolders
 OR Add (watch) subfolder and all it's subfolders and files
 `git add sub\**\*`
 
-#Configuration
+
+# Setup an editor
+```
+git config --global core.editor C:/windows/system32/ed.cmd
+```
+OR
+```
+git config --global core.editor "'C:\Marc\Prg\notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+```
+
+# Configuration
 The global configuration is stored in your user directory in `.gitconfig`
 e.g. `C:\Users\cama\.gitconfig` or ~/.gitconfig
 
 To view your current config
-`git config -l`
+```
+git config -l
+```
 To edit your global config
-`git config --global -e`
-
+```
+git config --global -e
+```
 
 Or to view a specific global config value
-`git config --global core.editor`
+```
+git config --global core.editor
+```
 
 To set a global config value:
-`git config --global core.editor npp.cmd`
+```
+git config --global core.editor npp.cmd
+```
 
 Project config is stored in `.git\config`
 
-##Alias Commands
-`git config --global alias.st status`
-Typing `git st` is now the same as `git status`!
-
-#Help
-`git help`
-`git help push` OR `git push --help`
-
-If you now change a file you it will be red (git status) which means it is out of sync
-You do `git add` to "stage" it which means it's part of the next commit
-If you change it again, the staged version remains as is and you have to `git add` again to stage it
-
 Commit staged (with `add`) files
-`git commit -m "Version 2.0"`
-
+```
+git commit -m "Version 2.0"
+```
 Commit all changed files (skip staging)
-`git commit -a -m "added new benchmarks"`
+```
+git commit -a -m "added new benchmarks"
+```
 
 See what branch you're on
 `git branch`
 
-See what's changed
-git diff
+Checkout a branch
+```
+git checkout mybranch
+```
 
-echo C:\Marc\Prg\UltraEditStudio\UltraCompare\uc.exe %2 %5 > c:\windows\system32\dif.cmd
-git config --global diff.external c:/windows/system32/dif.cmd
-echo C:\Marc\Prg\UltraEditStudio\UltraCompare\uc.exe %* > c:\windows\system32\diff.cmd
+See what's changed
+```
+git diff
+```
 
 Compare local to remote
+```
 git diff master origin/master
+```
 
+```
 git log
 git log --oneline
+```
 
 Push committed changes to original server master trunk
+```
 git push origin master
+```
 
-#Collaborate on Existing GitHub Projects
+## Alias Commands
+```
+git config --global alias.st status
+```
+Typing `git st` is now the same as `git status`!
+
+## Help
+`git help`
+`git help push` OR `git push --help`
+
+## Collaborate on Existing GitHub Projects
 
 1. Download a full repository:
 `git clone https://github.com/username/Spoon-Knife.git`
@@ -112,7 +124,7 @@ git push origin master
 "origin" is the synonym for "that branch on that server/repo where I go this project"
 git pull origin master -> Pull in and merge changes from latest master head on remote
 
-5. 
+5. Upload changes to original server
 `git push origin master`
 Read: upload/commit/merge my master branch with the original server branch
 
@@ -144,3 +156,10 @@ Pull remote in overwriting local:
 * `git fetch`
 * `git reset --hard origin/master`
 
+git commit -am 'im staging and committing!'
+
+When you change .gitignore do:
+git update-index
+
+To remove and untrack files
+update .gitignore then do git rm --cached "DEV1 Scorecard\src\package.xml"
