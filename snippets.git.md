@@ -133,7 +133,7 @@ git log --pretty=oneline
 Publish a new git project to github
 git remote add origin git@github.com:cawoodm/tennis.git
 git push origin master
-cawoodm:givson7
+cawoodm:***
 
 git remote add origin https://github.com/cawoodm/tennis
 
