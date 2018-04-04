@@ -156,7 +156,10 @@ git log --oneline
 ```
 
 Push committed changes to original server master trunk
+```
 git push origin master
+```
+`--force` will overwrite origin without merging
 
 #Collaborate on Existing GitHub Projects
 
