@@ -1,27 +1,86 @@
+PowowShell
+..........
+git init
+git add .
+ed .gitignore
+[add trace/ to .gitignore)
+git rm -r --cached bin/pipeline1/trace/
+git commit -a -m "Initial commit"
+[create repo on github]
+git push origin master
+git remote add origin git@github.com:cawoodm/powowshell.git
+git push origin master
+
+Powershell-UI
+-------------
+git init
+git config core.autocrlf input
+git config --global core.editor C:/Users/Lounge/AppData/Roaming/npm/ed.cmd
+git config -l
+git add .
+git commit -m "Version 0.0.1"
+Create a repo on github
+git remote add origin git@github.com:cawoodm/powershell-ui.git
+git pull origin master
+git push origin master
+
+SSH Issues
+Start Git Bash
+ssh -T git@github.com
+ssh-add -l
+eval "$(ssh-agent -s)"
+
+If you see no identities you need to make a new key:
+ssh-keygen -t rsa
+ssh-add
+open C:\Users\Lounge\.ssh\id_rsa.pub and paste contents to https://github.com/settings/ssh
+http://stackoverflow.com/questions/26505980/github-permission-denied-ssh-add-agent-has-no-identities
+
+
 git commit -am 'im staging and committing!'
 
 When you change .gitignore do:
 git update-index
 
 To remove and untrack files
-update .gitignore then do git rm --cached "DEV1 Scorecard\src\package.xml"
+update .gitignore then do:
+* `git reset op.txt` (before it's committed)
+* `git rm --cached "path\myfile.txt"` (after it's committed)
 
 
-Leica
+New Project
 git init
 git config core.autocrlf input
 git config --global user.name "Marc Cawood"
 git config --global user.email cawoodm@gmail.com
 git add .
 
-# Setup an editor
-`git config --global core.editor C:/windows/system32/ed.cmd`
+#Configuration
+The global configuration is stored in your user directory in `.gitconfig`
+e.g. `C:\Users\cama\.gitconfig` Project config is stored in `.git\config`
+
+To view your current config
+`git config -l`
+
+`git config --global user.name "Marc Cawood"`
+`git config --global core.editor C:/Users/Lounge/AppData/Roaming/npm/ed.cmd`
 OR
-`git config --global core.editor "'C:\Marc\Prg\notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`
+`git config --global core.editor "'"C:\Program Files (x86)\Notepad++\notepad++.exe"' -multiInst -notabbar -nosession -noPlugin"`
+
+## DiffTool Configuration
+```
+[diff]
+	tool = dif
+[difftool "dif"]
+  cmd = "C:/marc/prg/bcompare/bcompare.exe" \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+```
 
 # Making a New Project
 1. Create a project in the current directory
 `git init`
+
 
 2. Add Files to Project
 
@@ -42,23 +101,6 @@ OR Add (watch) all files and NOT subfolders
 OR Add (watch) subfolder and all it's subfolders and files
 `git add sub\**\*`
 
-#Configuration
-The global configuration is stored in your user directory in `.gitconfig`
-e.g. `C:\Users\cama\.gitconfig` or ~/.gitconfig
-
-To view your current config
-`git config -l`
-To edit your global config
-`git config --global -e`
-
-
-Or to view a specific global config value
-`git config --global core.editor`
-
-To set a global config value:
-`git config --global core.editor npp.cmd`
-
-Project config is stored in `.git\config`
 
 ##Alias Commands
 `git config --global alias.st status`
@@ -81,12 +123,19 @@ Commit all changed files (skip staging)
 See what branch you're on
 `git branch`
 
-See what's changed
-git diff
+See what's changed (working copy to repo)
+```
+git difftool
+```
+OR, to compare working copy to staging area (`git stage myfile.txt`)
+```
+git difftool --cached
+```
+OR, to compare local repo to remote (need to commit local changes first):
+```
+git difftool master origin/master
+```
 
-echo C:\Marc\Prg\UltraEditStudio\UltraCompare\uc.exe %2 %5 > c:\windows\system32\dif.cmd
-git config --global diff.external c:/windows/system32/dif.cmd
-echo C:\Marc\Prg\UltraEditStudio\UltraCompare\uc.exe %* > c:\windows\system32\diff.cmd
 
 Compare local to remote
 git diff master origin/master
@@ -131,9 +180,8 @@ git log --pretty=oneline
 
 
 Publish a new git project to github
-git remote add origin git@github.com:cawoodm/tennis.git
+git remote add origin git@github.com:cawoodm/powershell-ui.git
 git push origin master
-cawoodm:givson7
 
 git remote add origin https://github.com/cawoodm/tennis
 
