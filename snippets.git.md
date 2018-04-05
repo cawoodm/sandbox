@@ -161,7 +161,19 @@ git push origin master
 ```
 `--force` will overwrite origin without merging
 
-#Collaborate on Existing GitHub Projects
+# Push Source Control to a remote directory
+
+List remote destinations
+```
+git remote -v
+```
+
+Remove a destination
+```
+git remote rm destination
+```
+
+# Collaborate on Existing GitHub Projects
 
 1. Download a full repository:
 `git clone https://github.com/username/Spoon-Knife.git`
