@@ -21,7 +21,7 @@ OR
 
 # Making a New Project
 1. Create a project in the current directory
-`git init`
+   `git init`
 
 2. Add Files to Project
 
@@ -88,8 +88,11 @@ echo C:\Marc\Prg\UltraEditStudio\UltraCompare\uc.exe %2 %5 > c:\windows\system32
 git config --global diff.external c:/windows/system32/dif.cmd
 echo C:\Marc\Prg\UltraEditStudio\UltraCompare\uc.exe %* > c:\windows\system32\diff.cmd
 
-Compare local to remote
-git diff master origin/master
+Compare local branch (committed) to remote
+`git diff master origin/master`
+
+Compare local working copy to remote
+`git diff origin/master`
 
 git log
 git log --oneline
@@ -100,21 +103,21 @@ git push origin master
 #Collaborate on Existing GitHub Projects
 
 1. Download a full repository:
-`git clone https://github.com/username/Spoon-Knife.git`
+   `git clone https://github.com/username/Spoon-Knife.git`
 
 2. Make changes to files
 
 3. Commit all changes (locally)
-`git commit -a -m "My First Change"`
+   `git commit -a -m "My First Change"`
 
 4. Pull down latest changes from repo and auto merge
-`git pull origin`
-"origin" is the synonym for "that branch on that server/repo where I go this project"
-git pull origin master -> Pull in and merge changes from latest master head on remote
+   `git pull origin`
+   "origin" is the synonym for "that branch on that server/repo where I go this project"
+   git pull origin master -> Pull in and merge changes from latest master head on remote
 
 5. 
-`git push origin master`
-Read: upload/commit/merge my master branch with the original server branch
+   `git push origin master`
+   Read: upload/commit/merge my master branch with the original server branch
 
 Pushing never automatically does a merge. The user is expected to pull, resolving any merge conflicts locally, then push back to the remote. 
 
@@ -140,4 +143,7 @@ git remote add origin https://github.com/cawoodm/tennis
 #Gotchas
 Using ' instead of " in windows doesn't work! (Paths with -a does not make sense.)
 
-
+# Privacy issues
+git config --global user.email 498834+cawoodm@users.noreply.github.com
+git config user.email 498834+cawoodm@users.noreply.github.com
+git commit --amend --author="Marc Cawood <498834+cawoodm@users.noreply.github.com>" -m Mmmm
