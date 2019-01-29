@@ -4,11 +4,12 @@ git init
 git config core.autocrlf input
 git config user.name "Marc Cawood"
 git config user.email 498834+cawoodm@users.noreply.github.com
-git add .
-git commit -am "Initial commit"
 git remote add origin https://github.com/cawoodm/blah.git (create it first on GitHub)
 git fetch
 git pull origin master --allow-unrelated-histories
+git add .
+git commit -am "Initial commit"
+git push --set-upstream origin master
 ```
 
 # Making a New Project
