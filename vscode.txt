@@ -1,0 +1,26 @@
+%AppData%\Roaming\Code\User\keybindings.json
+
+Ctrl+D: Duplicate a line
+Ctrl+E: Delete a line
+Ctrl+UP: Move line up
+Ctrl+Down: Move line down
+
+Ctrl+Shift+K: Keyboard bindings
+Ctrl+P: Quick open/command
+
+Navigation and Bookmarks
+Ctrl+-: Go back
+Ctrl+F2: Set bookmark
+F2: next bookmark
+Shift F2: prev bookmark
+F5: Reload file
+
+Comments:
+Ctrl+>: Add comment
+Ctrl+Shift+>: Remove comment
+
+Terminal:
+Ctrl+T: Switch between editor and Terminal
+Alt+RightArrow: Next terminal
+Alt+LeftArrow: Previous terminal
+Ctrl+Shift+T
