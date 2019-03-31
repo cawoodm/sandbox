@@ -1,4 +1,4 @@
-%AppData%\Roaming\Code\User\keybindings.json
+%AppData%\Code\User\keybindings.json (Ctrl+Alt+K)
 
 Ctrl+D: Duplicate a line
 Ctrl+E: Delete a line
