@@ -151,6 +151,12 @@ OR, to compare local repo to remote (need to commit local changes first):
 ```
 git difftool master origin/master
 ```
+OR compare two commits of one file
+```
+git log myfile.txt
+git difftool commitid...1 commitid...1 myfile.txt
+```
+
 OR
 ```
 git log
