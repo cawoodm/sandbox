@@ -4,7 +4,8 @@ git init
 git config core.autocrlf input
 git config user.name "Marc Cawood"
 git config user.email 498834+cawoodm@users.noreply.github.com
-git remote add origin https://github.com/cawoodm/blah.git (create it first on GitHub)
+git remote add origin git@github.com:cawoodm/powershell-ui.git
+--git remote add origin https://github.com/cawoodm/blah.git (create it first on GitHub)--
 git fetch
 git pull origin master --allow-unrelated-histories
 git add .
