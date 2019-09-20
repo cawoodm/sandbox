@@ -4,7 +4,8 @@ git init
 git config core.autocrlf input
 git config user.name "Marc Cawood"
 git config user.email 498834+cawoodm@users.noreply.github.com
-git remote add origin https://github.com/cawoodm/blah.git (create it first on GitHub)
+git remote add origin git@github.com:cawoodm/powershell-ui.git
+--git remote add origin https://github.com/cawoodm/blah.git (create it first on GitHub)--
 git fetch
 git pull origin master --allow-unrelated-histories
 git add .
@@ -12,6 +13,12 @@ git commit -am "Initial commit"
 git push --set-upstream origin master
 git config --global credential.helper cache
 ```
+
+### Copy a project from one repo to another
+1. Create new repo (e.g. on github)
+2. Go to original repo folder and run:
+3. `git push --mirror https://github.com/cawoodm/my_repo.git`
+4. OR `git push --mirror git@github.com:cawoodm/my_repo.git`
 
 # Making a New Project
 1. Create a project in the current directory
