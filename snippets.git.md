@@ -10,6 +10,7 @@ git pull origin master --allow-unrelated-histories
 git add .
 git commit -am "Initial commit"
 git push --set-upstream origin master
+git config --global credential.helper cache
 ```
 
 # Making a New Project
@@ -258,3 +259,7 @@ Create a repo on github
 git remote add origin git@github.com:cawoodm/powershell-ui.git
 git pull origin master
 git push origin master
+
+
+Save passwords:
+`git config --global credential.helper cache`
