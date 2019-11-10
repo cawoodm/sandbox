@@ -1,0 +1,68 @@
+<html>
+<head>
+  <title>
+    Welcome!
+  </title>
+  <style>
+    .wrapper {
+      display: grid;
+      /*grid-template-columns: 100px 100px 100px;
+      grid-template-rows: 50px 50px;*/
+    }
+    .span1-4 {
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+    .OK {
+      background-color: #009b91
+    }
+    .WARNING {
+      background-color: #e68f03
+    }
+    .CRITICAL {
+      background-color: #e60303
+    }
+    .block {
+      padding: 10px;
+      margin: 10px;
+    }
+    .prio1 {
+      min-width: 120px;
+      min-height: 120px;
+    }
+    .prio2 {
+      min-width: 90px;
+      min-height: 90px;
+    }
+    .prio3 {
+      min-width: 60px;
+      min-height: 60px;
+    }
+    .rnd {
+      border-radius: 10px;
+    }
+    .h1 {
+      text-align: center
+    }
+    .prio1 .h1 {
+      font-size: 42pt
+    }
+    .prio2 .h1 {
+      font-size: 38pt
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="rnd block prio1 OK span1-4"><div class="h1">256</div>SAP Response Time</div>
+    <div class="rnd block prio1 OK"><div class="h1">256</div>SAP Response Time</div>
+    <div class="rnd block prio2 WARNING item-2"><div class="h1">2</div></div>
+    <div class="rnd block prio2 OK item-3"><div class="h1">78</div></div>
+    <div class="rnd block prio2 CRITICAL item-4"><div class="h1">56</div></div>
+    <div class="rnd block prio3 WARNING item-5"><div class="h1">560</div></div>
+    <div class="rnd block prio3 OK item-6"><div class="h1">2'516</div></div>
+    <div class="rnd block prio3 OK item-6"><div class="h1">126</div></div>
+    <div class="rnd block prio3 OK item-6"><div class="h1">26</div></div>
+  </div>
+</body>
+</html>
