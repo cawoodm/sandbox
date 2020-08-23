@@ -154,4 +154,15 @@ Open Display Settings
 lxrandr
 
 
+# Usability
+* `~/.basrc`
+* ls should format long and show all: `alias ls='ls -alF'`
+* Decent bash completion `. /usr/share/bash-completion/bash_completion`
 
+# Git branch prompt
+```
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+```
