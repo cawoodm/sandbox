@@ -1,0 +1,22 @@
+{
+  "name": "test1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "debug": "nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-config-strongloop": "^2.1.0"
+  }
+}
