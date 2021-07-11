@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-hello
+spec:
+  selector:
+    matchLabels:
+      run: app2
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        run: app2
+    spec:
+      containers:
+        - name: node-hello
+          image: gcr.io/google-samples/node-hello:1.0
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+# kubectl apply -f node-hello-deployment.yaml
+# kubectl expose deployment node-hello --type=NodePort --name=app2-service
+# OR kubectl apply -f node-hello-service.yaml
+
+# Create Nginx Deployment, NodePort and Ingress
+#  https://k3d.io/usage/guides/exposing_services/
+
+# Add a new path to ingress /app2 pointing to app2-service:8080
+# apply hello-ingress.yaml
+# curl localhost:8081/app2
